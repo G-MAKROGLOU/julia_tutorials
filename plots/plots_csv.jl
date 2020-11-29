@@ -16,9 +16,22 @@ oilSpills[1:5, :] #rows 1 to 5 for all columns
 #different types of plots that can be instantiated by themeselves
 #or together combined in a plot with layout parameters
 
+gr() #load the gr backend
+#or
+Plots.GRBackend() #load the gr backend
+#or
+Plots.PlotlyJSBackend() #load PlotlyJSBackend - this backend allows tooltips on hover 
+
+xflip!() #reverses the x axis values from increasing to decreasing
+xlabel!("new x axis label")# edit the xlabel of an existing plot
+ylabel!("new y axis label")# edit the ylabel of an existing plot
+title!("new tilte")# edit the title of an existing plot
+
 plot() #creates an empty plot
 x = 1:15; y = rand(15)
 plot(x,y) #creates a plot with the specified values
+scatter!(x,y) #modify the existing plot instead of creating a new one
+
 z = rand(15)
 plot!(x,z) #adds a dataset to the plot
 

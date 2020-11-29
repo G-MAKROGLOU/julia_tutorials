@@ -124,6 +124,3 @@ end
     D = [i + j for i in 1:n, k in 1:n]
     display(A)
  end
-
-
- #conditionals
